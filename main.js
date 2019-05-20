@@ -3,9 +3,9 @@ const path = require('path')
 const fs = require('fs')
 
 //Change this value to production while building and packaging
-process.env.NODE_ENV = 'dev'
+process.env.NODE_ENV = 'production'
             
-// process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
 
 if (process.env.NODE_ENV !== 'production') {
     require('electron-reload')(__dirname, {
@@ -39,9 +39,9 @@ function createWindow() {
     win.loadURL(path.join('file://', __dirname, '/app/views/index.html'))
 
     // Open the DevTools.
-    if (process.env.NODE_ENV !== 'production') {
-        // win.webContents.openDevTools()
-    }
+    // if (process.env.NODE_ENV !== 'production') {
+    //     // win.webContents.openDevTools()
+    // }
 
     win.once('ready-to-show', () => {
         win.show()
@@ -101,7 +101,7 @@ ipcMain.on('settings:open', (event, args) => {
     })
 
     settingsWin.loadURL(path.join('file://', __dirname, '/app/views/settings.html'))
-
+    
     settingsWin.once('ready-to-show', () => {
         settingsWin.webContents.send('params:update', args)
         settingsWin.show()
