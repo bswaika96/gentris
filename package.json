@@ -13,7 +13,7 @@
     "css-watch": "npm run watch-css",
     "get-ready": "npm install && cd app && mkdir .data && mkdir .img && cd ..",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
-    "package-win": "electron-packager . gentris --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=BS --version-string.FileDescription=BS --version-string.ProductName=\"GenTris Simulator\"",    
+    "package-win": "electron-packager . gentris --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=BS --version-string.FileDescription=BS --version-string.ProductName=\"GenTris Simulator\"",
     "package-linux": "electron-packager . gentris --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "author": "Baladitya Swaika",
@@ -22,6 +22,7 @@
     "autoprefixer": "^9.5.1",
     "chart.js": "^2.8.0",
     "electron": "^5.0.1",
+    "electron-packager": "^13.1.1",
     "electron-reload": "^1.4.0",
     "html2canvas": "^1.0.0-rc.1",
     "node-sass": "^4.12.0",
