@@ -2,7 +2,10 @@ const { app, BrowserWindow, ipcMain, dialog, powerSaveBlocker } = require('elect
 const path = require('path')
 const fs = require('fs')
 
-process.env.NODE_ENV = 'dev'              //Change this value to production while building and packaging
+//Change this value to production while building and packaging
+process.env.NODE_ENV = 'dev'
+            
+// process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
 
 if (process.env.NODE_ENV !== 'production') {
     require('electron-reload')(__dirname, {
@@ -23,7 +26,8 @@ function createWindow() {
         height: 700,
         webPreferences: {
             nodeIntegration: true,
-            backgroundThrottling: false
+            backgroundThrottling: false,
+            devTools: false
         },
         frame: false,
         show: false,
@@ -189,7 +193,8 @@ ipcMain.on('analytics:open', (event) => {
         y: win.getPosition()[1],
         transparent: true,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            devTools: false
         },
         show: false,
         parent: win,
