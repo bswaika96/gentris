@@ -1,0 +1,9 @@
+.settings-sidebar{
+    background-color: $brand-blue;
+    transition: 0.2s ease-in-out;
+}
+
+.settings-sidebar:hover{
+    background-color: $brand-blue-lighter;
+    cursor: pointer;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GenTris Simulator</title>
+
+    <link rel="stylesheet" href="../src/css/main.css">
+</head>
+
+<body>
+    <header id="titlebar">
+        <div id="drag-region">
+
+            <div id="window-title">
+                <img src="../assets/logo.png" alt="" class="window-title-logo">
+                <span>gen<span class="bold">tris</span> simulator</span>
+            </div>
+
+            <div id="window-controls">
+                <div class="button" id="min-button">
+                    <span><img src="../assets/icons/minimize-blue.png" alt="" class="control-icon"></span>
+                </div>
+                <div class="button" id="close-button">
+                    <span><img src="../assets/icons/close.png" alt="" class="control-icon"></span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="game"></div>
+            <div class="console">
+                <div class="upcoming">
+                    <div class="text">upcoming <span class="bold">block</span></div>
+                    <div class="place"></div>
+                </div>
+                <div class="score">
+                    <div class="text"><span class="bold">lines</span> cleared</div>
+                    <div class="place"></div>
+                </div>
+                <div class="moves">
+                    <div class="text"><span class="bold">moves</span> taken</div>
+                    <div class="place"></div>
+                </div>
+                <div class="generation">
+                    <div class="text">current <span class="bold">generation</span></div>
+                    <div class="place"></div>
+                </div>
+                <div class="genome">
+                    <div class="text">current <span class="bold">genome</span></div>
+                    <div class="place"></div>
+                </div>
+                <div class="progress-spinner hidden">
+                    <div class="download control"><img src="../assets/icons/download.png" alt="" class="control-icon hidden"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="taskbar">
+            <div class="container left">
+                <div class="play control"><img src="../assets/icons/play-color.png" alt="" class="control-icon"></div>
+                <div class="upload control"><img src="../assets/icons/upload.png" alt="" class="control-icon"></div>
+            </div>
+            <div class="container right">
+                <div class="analytics control"><img src="../assets/icons/analytics.png" alt="" class="control-icon"></div>
+                <div class="settings control"><img src="../assets/icons/settings.png" alt="" class="control-icon"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+    <script>
+        require('../src/js/app')
+    </script>
+
+</body>
+
+</html>

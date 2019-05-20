@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analytics</title>
+
+    <link rel="stylesheet" href="../src/css/main.css">
+</head>
+<body class="child">
+    <div class="wrapper analytics">
+        <header class="sidebar analytics-sidebar">
+            <div class="window-name"><span class="bold">analytics</span> window</div>
+            <div class="control-icon"><img src="../assets/icons/left-arrow.png" alt="" class="back"></div>
+        </header>
+
+        <main class="child analytics" id="scrollbar">
+            <h1 class="window-heading">Analytics</h1>
+            <div class="menu analytics-menu">
+                <div class="upload control"><img src="../assets/icons/upload.png" alt="" class="control-icon"></div>
+                <div class="download control"><img src="../assets/icons/download-disabled.png" alt="" class="control-icon disabled"></div>
+                <div class="upload-file-name"></div>
+            </div>
+
+            <section class="analytics" id="export-analytics-to-img">
+                <div class="section method-description"></div>
+                <div class="section elite-fitness-vs-generation">
+                    <div class="efvg-title"></div>
+                    <canvas id="chart-elite-fitness-vs-generation"></canvas>
+                </div>
+                <div class="section genome-fitness-vs-popSize">
+                    <div class="gfvp-title"></div>
+                    <canvas id="chart-genome-fitness-vs-popSize"></canvas><br>
+                    <canvas id="chart-generation-mean-variance-fitness"></canvas>
+                </div>
+                <div class="section correlation-of-weights">
+                    <div class="cow-title"></div>
+                    <canvas id="chart-correlation-of-weights"></canvas>
+                </div>
+                <div class="section best-fit-elite-weights">
+                    <div class="bfew-title"></div>
+                    <canvas id="chart-best-fit-elite-weights"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        require('../src/js/analytics')
+    </script>
+</body>
+</html>

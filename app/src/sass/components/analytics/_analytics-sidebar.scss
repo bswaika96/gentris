@@ -1,0 +1,9 @@
+.analytics-sidebar{
+    background-color: $brand-orange;
+    transition: 0.2s ease-in-out;
+}
+
+.analytics-sidebar:hover{
+    background-color: $brand-orange-lighter;
+    cursor: pointer;
+}

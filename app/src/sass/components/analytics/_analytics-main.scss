@@ -1,0 +1,98 @@
+main.child.analytics{
+    height: 684px;
+    width: 660px;
+    margin-left: 8px;
+    font-size: 16px;
+    padding-top: 16px;
+    padding-right: 8px;
+
+    h1.window-heading{
+        color: $brand-orange;
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .menu{
+        width: 100%;
+        height: 48px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-bottom: 16px;
+
+        .control{
+            margin-right: 8px;
+        }
+
+        .control-icon{
+            height: 32px;
+            cursor: pointer;
+        }
+
+        .control-icon.disabled{
+            cursor: default;
+        }
+
+        .upload-file-name{
+            color: $light-grey;
+            font-size: 12px;
+            font-weight: $light;
+            line-height: 4;
+        }
+    }
+
+    section.analytics{
+        h2{
+            font-size: 20px;
+            font-weight: $light;
+        }
+
+        p{
+            line-height: 1.5;
+        }
+
+        .bold{
+            font-weight: $bold;
+        }
+
+        .brand-orange{
+            color: $brand-orange;
+        }
+
+        .brand-blue{
+            color:$brand-blue;
+        }
+
+        .analytics-title-separator{
+            width: 60%;
+            margin-left: 0;
+            border: none;
+            height: 2px;
+            background-color: $brand-blue-lighter
+        }
+
+        div.section{
+            margin-bottom: 16px;
+        }
+    }
+}
+
+#scrollbar{
+    overflow-y: scroll;
+}
+
+#scrollbar::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    background-color: #f6f6f6;
+}
+
+#scrollbar::-webkit-scrollbar{
+    width: 8px;
+    background-color: #f6f6f6;
+}
+
+#scrollbar::-webkit-scrollbar-thumb{
+    background-color: $brand-orange-lighter;
+}

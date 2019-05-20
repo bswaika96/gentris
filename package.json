@@ -1,0 +1,30 @@
+{
+  "name": "gentris-simulator",
+  "version": "1.0.0",
+  "description": "A genetic tetris agent desktop app created using Electron, with a focus on variability of parameters for the genetic algorithm and data visualisation and analysis from those different runs. It is an entire platform for testing and validating tetris agents.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "post-css": "postcss ./app/src/css/main.css --use autoprefixer --replace",
+    "build-css": "node-sass --include-path ./app/src/sass ./app/src/sass/main.scss ./app/src/css/main.css",
+    "watch-css": "node-sass --watch --include-path ./app/src/sass ./app/src/sass/main.scss ./app/src/css/main.css",
+    "minify-css": "postcss ./app/src/css/main.css --use postcss-clean --output ./app/src/css/main.min.css",
+    "css-build": "npm run build-css && npm run post-css && npm run minify-css",
+    "css-watch": "npm run watch-css",
+    "get-ready": "npm install && cd app && mkdir .data && mkdir .img && cd .."
+  },
+  "author": "Baladitya Swaika",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "chart.js": "^2.8.0",
+    "electron": "^5.0.1",
+    "electron-reload": "^1.4.0",
+    "html2canvas": "^1.0.0-rc.1",
+    "node-sass": "^4.12.0",
+    "postcss-clean": "^1.1.0",
+    "postcss-cli": "^6.1.2",
+    "spin": "0.0.1"
+  },
+  "dependencies": {}
+}

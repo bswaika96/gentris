@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parameter Settings</title>
+
+    <link rel="stylesheet" href="../src/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+    <style>
+        .textInput{
+            font-size: 10px !important;
+            padding: 6px !important;
+        }
+    </style>
+</head>
+
+<body class="child">
+    <div class="wrapper settings">
+        <header class="sidebar settings-sidebar">
+            <div class="window-name"><span class="bold">settings</span> window</div>
+            <div class="control-icon"><img src="../assets/icons/left-arrow.png" alt="" class="back"></div>
+        </header>
+
+        <main class="child settings">
+            <form class="uk-form-stacked">
+                <fieldset class="uk-fieldset">
+
+                    <legend class="uk-legend color-blue">Parameters</legend>
+
+                    <div class="uk-margin">
+                            <div class="uk-form-label uk-margin-small-bottom">Generations</div>
+                            <div class="uk-form-controls uk-inline uk-width-1-1">
+                                <div class="uk-grid" uk-grid>
+                                    <div class="uk-width-3-4 uk-position-center-left"><input class="uk-range" type="range" min="1" max="500" step="1" id="gens"></div>
+                                    <div class="uk-width-1-4 uk-position-center-right uk-margin-small-right"><input class="uk-input uk- uk-form-width-xsmall textInput" type="text" id="gensText" disabled></div>    
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label uk-margin-small-bottom">Population Size</div>
+                        <div class="uk-form-controls uk-inline uk-width-1-1">
+                            <div class="uk-grid" uk-grid>
+                                <div class="uk-width-3-4 uk-position-center-left"><input class="uk-range" type="range" value="2" min="10" max="200" step="10" id="popSize"></div>
+                                <div class="uk-width-1-4 uk-position-center-right uk-margin-small-right"><input class="uk-input uk- uk-form-width-xsmall textInput" type="text" id="popSizeText" disabled></div>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label uk-margin-small-bottom">Mutation Rate</div>
+                        <div class="uk-form-controls uk-inline uk-width-1-1">
+                            <div class="uk-grid" uk-grid>
+                                <div class="uk-width-3-4 uk-position-center-left"><input class="uk-range" type="range" value="2" min="0.01" max="0.5" step="0.01" id="mutRate"></div>
+                                <div class="uk-width-1-4 uk-position-center-right uk-margin-small-right"><input class="uk-input uk- uk-form-width-xsmall textInput" type="text" id="mutRateText" disabled></div>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label uk-margin-small-bottom">Mutation Step</div>
+                        <div class="uk-form-controls uk-inline uk-width-1-1">
+                            <div class="uk-grid" uk-grid>
+                                <div class="uk-width-3-4 uk-position-center-left"><input class="uk-range" type="range" value="2" min="0.01" max="1" step="0.01" id="mutStep"></div>
+                                <div class="uk-width-1-4 uk-position-center-right uk-margin-small-right"><input class="uk-input uk- uk-form-width-xsmall textInput" type="text" id="mutStepText" disabled></div>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label uk-margin-small-bottom">Controller Type</div>
+                        <div class="uk-form-controls">
+                            <label><input class="uk-radio" type="radio" name="controller" id="onePiece"> one piece</label>
+                            <label><input class="uk-radio" type="radio" name="controller" id="twoPiece"> two piece</label>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label uk-margin-small-bottom">Selection Type</div>
+                        <div class="uk-form-controls">
+                            <label><input class="uk-radio" type="radio" name="selection" id="top10"> top 10%</label>
+                            <label><input class="uk-radio" type="radio" name="selection" id="top25"> top 25%</label>
+                            <label><input class="uk-radio" type="radio" name="selection" id="top50"> top 50%</label>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label uk-margin-small-bottom">CrossOver Type</div>
+                        <div class="uk-form-controls">
+                            <label><input class="uk-radio" type="radio" name="crossover" id="random"> random</label>
+                            <label><input class="uk-radio" type="radio" name="crossover" id="average"> average</label>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-form-label uk-margin-small-bottom">Algorithm Weight Add-Ons</div>
+                        <div class="uk-form-controls">
+                            <label><input class="uk-checkbox" type="checkbox" name="weights" id="blockades"> blockades</label>
+                            <label><input class="uk-checkbox" type="checkbox" name="weights" id="wells"> wells</label>
+                            <label><input class="uk-checkbox" type="checkbox" name="weights" id="blocks"> blocks</label>
+                            <label><input class="uk-checkbox" type="checkbox" name="weights" id="wblocks"> weightedBlocks</label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <script>
+        require('../src/js/settings')
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+main{
+    .container{
+        color: $white;
+        font-size: 16px;
+        margin-top: 24px;
+        margin-left: 12px;
+        height: 547.5px;
+
+        display: flex;
+        flex-direction: row;
+
+        .game{
+            height: 100%;
+            width: calc(10*25px + 10*2.5px + 10px);
+
+            .row{
+                display: block;
+                margin-bottom: 1px;
+            }
+
+            .cell{
+                display: inline-block;
+                height: 25px;
+                width: 25px;
+                margin-right: 2.5px;
+                border-radius: $border-radius;
+            }
+
+            .empty{
+                background-color: $dark-grey;
+            }
+        }
+
+        .console{
+            height: 100%;
+            width: calc(6*25px + 6*2.5px);
+
+            .progress-spinner{
+                margin-top: 27.5px;
+                height: 100px;
+                width: 100px;
+                position: relative;
+
+                .spinner{
+                    position: absolute;
+                    top: 16px;
+                    left: 16px;
+                }
+
+                .control-icon{
+                    display: block;
+                    height: 32px;
+                    cursor: pointer;
+                }
+
+                .control-icon.hidden{
+                    display: none;
+                }
+            }
+
+            .upcoming{
+                .place{
+                    height: calc(6*25px + 6*2.5px);
+                    padding-top: 27.5px;
+                    .row{
+                        line-height:0.9;
+                        display: block;
+                        margin-bottom: 1px;
+                        margin-left: 20px;
+                    }
+        
+                    .cell{
+                        display: inline-block;
+                        height: 25px;
+                        width: 25px;
+                        margin-right: 2.5px;
+                        border-radius: $border-radius;
+                    }
+        
+                    .empty{
+                        background-color: $dark-grey;
+                    }
+
+                }
+            }
+
+            .score, .generation{
+                .place{
+                    color: $brand-orange;
+                }
+            }
+
+            .moves, .genome{
+                .place{
+                    color: $brand-blue;
+                }
+            }
+
+            .score, .generation{
+                margin-top: 27.5px;
+            }
+
+            .place{
+                background-color: $dark-grey;
+                height: 25px;
+                border-radius: $border-radius;
+                margin-bottom: 2.5px;
+                border-bottom: 2px solid $light-grey;
+                line-height: 1.5;
+                padding-left: 8px;
+                font-weight: $bold;
+            }
+
+            .text{
+                height: 25px;
+                line-height: 1.5;
+                margin-bottom: 2.5px;
+            }
+
+            span.bold{
+                font-weight: $extrabold;
+            }
+        }
+
+    }
+}
+
+.I{
+    background-color: $piece-I;
+}
+
+.J{
+    background-color: $piece-J;
+}
+
+.L{
+    background-color: $piece-L;
+}
+
+.T{
+    background-color: $piece-T;
+}
+
+.Z{
+    background-color: $piece-Z;
+}
+
+.S{
+    background-color: $piece-S;
+}
+
+.O{
+    background-color: $piece-O;
+}
+
+@keyframes spinner-line-fade-more {
+    0%, 100% {
+        opacity: 0; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-fade-quick {
+    0%, 39%, 100% {
+        opacity: 0.25; /* minimum opacity */
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-fade-default {
+    0%, 100% {
+        opacity: 0.22; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}
