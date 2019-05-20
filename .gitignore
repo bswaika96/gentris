@@ -2,6 +2,7 @@ node_modules/
 
 app/.data/
 app/.img/
+release-builds/
 
 .env
 .env.test
