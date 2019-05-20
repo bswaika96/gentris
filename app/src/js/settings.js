@@ -170,4 +170,5 @@ clicker.addEventListener('click',  (e) => {
 
 ipcRenderer.on('params:update', (event, params) => {
     renderParams(params)
+    win.show()
 })

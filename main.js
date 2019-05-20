@@ -104,7 +104,7 @@ ipcMain.on('settings:open', (event, args) => {
     
     settingsWin.once('ready-to-show', () => {
         settingsWin.webContents.send('params:update', args)
-        settingsWin.show()
+        // settingsWin.show()
     })    
 
     settingsWin.on('closed', () => {
